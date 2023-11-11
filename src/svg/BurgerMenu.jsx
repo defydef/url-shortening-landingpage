@@ -7,9 +7,9 @@ function BurgerMenu() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect y="3" width="24" height="3" fill="#9E9AA8" />
-      <rect y="12" width="24" height="3" fill="#9E9AA8" />
-      <rect y="21" width="24" height="3" fill="#9E9AA8" />
+      <rect y="1" width="24" height="3" fill="#9E9AA8" />
+      <rect y="10" width="24" height="3" fill="#9E9AA8" />
+      <rect y="19" width="24" height="3" fill="#9E9AA8" />
       {/* <path
         d="M4 18L20 18"
         stroke="#9E9AA8"
