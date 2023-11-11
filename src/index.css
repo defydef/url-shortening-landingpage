@@ -3,19 +3,22 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* Background Colors */
+  --primary: #34313d;
+
+  /* Text colors */
 }
 
 body {
-  margin: 0;
-  display: grid;
-  place-content: center;
-  min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }

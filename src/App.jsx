@@ -1,5 +1,11 @@
+import Navbar from "./ui/Navbar";
+
 function App() {
-  return <div className="font-bold text-3xl">test</div>;
+  return (
+    <main className="flex justify-between">
+      <Navbar />
+    </main>
+  );
 }
 
 export default App;
