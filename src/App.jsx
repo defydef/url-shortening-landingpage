@@ -3,6 +3,7 @@ import MobileMenu from "./ui/MobileMenu";
 import Navbar from "./ui/Navbar";
 import Hero from "./ui/Hero";
 import Header from "./ui/Header";
+import Form from "./ui/Form";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -12,6 +13,7 @@ function App() {
       <MobileMenu isShowMobileMenu={isShowMobileMenu} />
       <Hero />
       <Header />
+      <Form />
     </main>
   );
 }
