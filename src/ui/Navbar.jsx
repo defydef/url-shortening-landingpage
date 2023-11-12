@@ -1,19 +1,21 @@
 import Logo from "../svg/Logo";
 import BurgerMenu from "../svg/BurgerMenu";
-import { useState } from "react";
 
 function Navbar({ setIsShowMobileMenu }) {
   function showMobileMenu() {
     setIsShowMobileMenu((prev) => !prev);
-    console.log("test");
   }
   return (
-    <nav className="pt-10 pb-6 w-[85vw]">
-      <ul className="flex justify-between items-center">
-        <Logo />
-        <button className="cursor-pointer" onClick={showMobileMenu}>
-          <BurgerMenu />
-        </button>
+    <nav className="pt-10 pb-6 max-w-[375px] w-[100vh] px-6">
+      <ul className="flex justify-between">
+        <li>
+          <Logo />
+        </li>
+        <li>
+          <button className="cursor-pointer" onClick={showMobileMenu}>
+            <BurgerMenu />
+          </button>
+        </li>
       </ul>
     </nav>
   );

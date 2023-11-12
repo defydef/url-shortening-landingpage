@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MobileMenu from "./ui/MobileMenu";
 import Navbar from "./ui/Navbar";
+import Hero from "./ui/Hero";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -8,6 +9,7 @@ function App() {
     <main>
       <Navbar setIsShowMobileMenu={setIsShowMobileMenu} />
       <MobileMenu isShowMobileMenu={isShowMobileMenu} />
+      <Hero />
     </main>
   );
 }
