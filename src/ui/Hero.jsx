@@ -3,8 +3,7 @@ import Illustration from "../svg/Illustration";
 
 function Hero() {
   return (
-    <section className="overflow-hidden pl-6">
-      {/* <img src={Illustration} alt="Illustration image" width="800" /> */}
+    <section className="overflow-hidden pl-7">
       <Illustration />
     </section>
   );

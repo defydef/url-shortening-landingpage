@@ -4,9 +4,8 @@ function Illustration() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="135%"
-      height="100%"
+      height="110%"
       viewBox="0 0 733 482"
-      // className="mr-[-50px]"
     >
       <defs>
         <linearGradient id="a" x1="0%" x2="100%" y1="50%" y2="50%">
