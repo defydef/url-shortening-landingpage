@@ -3,7 +3,7 @@ import BurgerMenu from "../svg/BurgerMenu";
 
 function Navbar() {
   return (
-    <nav className="py-10 w-[85vw]">
+    <nav className="pt-10 pb-6 w-[85vw]">
       <ul className="flex justify-between items-center">
         <Logo />
         <div className="cursor-pointer">
