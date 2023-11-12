@@ -1,11 +1,13 @@
+import { useState } from "react";
 import MobileMenu from "./ui/MobileMenu";
 import Navbar from "./ui/Navbar";
 
 function App() {
+  const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   return (
     <main>
-      <Navbar />
-      <MobileMenu />
+      <Navbar setIsShowMobileMenu={setIsShowMobileMenu} />
+      <MobileMenu isShowMobileMenu={isShowMobileMenu} />
     </main>
   );
 }
