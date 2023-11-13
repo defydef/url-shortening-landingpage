@@ -1,3 +1,5 @@
+import StatsItem from "./StatsItem";
+
 function Stats() {
   return (
     <section className="flex flex-col justify-center gap-5 items-center bg-[var(--light-grey)] z-0 row-start-2 row-span-2 col-start-1 px-10 pt-44 pb-32">
@@ -8,6 +10,9 @@ function Stats() {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
+      <div>
+        <StatsItem />
+      </div>
     </section>
   );
 }
