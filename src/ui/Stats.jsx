@@ -1,4 +1,7 @@
 import StatsItem from "./StatsItem";
+import IconBrandRecognition from "../svg/IconBrandRecognition";
+import IconDetailedRecords from "../svg/IconDetailedRecords";
+import IconFullyCustomizable from "../svg/IconFullyCustomizable";
 
 function Stats() {
   return (
@@ -10,8 +13,23 @@ function Stats() {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <div>
-        <StatsItem />
+      <div className="flex flex-col justify-start gap-0 pt-10">
+        <StatsItem label="Brand Recognition" icon={<IconBrandRecognition />}>
+          Boost your brand recognition with each click. Generic links don’t mean
+          a thing. Branded links help instil confidence in your content.
+        </StatsItem>
+        <StatsItem label="Detailed Records" icon={<IconDetailedRecords />}>
+          Gain insights into who is clicking your links. Knowing when and where
+          people engage with your content helps inform better decisions.
+        </StatsItem>
+        <StatsItem
+          label="Fully Customizable"
+          icon={<IconFullyCustomizable />}
+          showLine={false}
+        >
+          Improve brand awareness and content discoverability through
+          customizable links, supercharging audience engagement.
+        </StatsItem>
       </div>
     </section>
   );
