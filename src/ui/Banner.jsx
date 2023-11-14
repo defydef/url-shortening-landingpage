@@ -1,12 +1,17 @@
 import Button from "./Button";
+import BgBoostMobile from "../svg/BgBoostMobile";
 
 function Banner() {
   return (
-    <div className="w-[23.4375rem] bg-[var(--secondary-1)] flex flex-col gap-4 justify-center items-center py-28 px-7">
-      <h1 className="text-white font-bold text-[1.75rem] text-center">
-        Boost your links today
-      </h1>
-      <Button width="w-[50vw]">Get Started</Button>
+    <div className="grid grid-rows-2 grid-cols-1">
+      <BgBoostMobile />
+      <div className="w-[23.4375rem] bg-[var(--secondary-1)] z-0 row-start-1 row-span-full col-start-1 col-span-full"></div>
+      <div className="z-10 row-start-1 row-span-full col-start-1 flex flex-col justify-center items-center gap-5">
+        <h1 className="text-white font-bold text-[1.75rem] text-center">
+          Boost your links today
+        </h1>
+        <Button additionalClass="w-[50vw] mx-auto h-max">Get Started</Button>
+      </div>
     </div>
   );
 }
