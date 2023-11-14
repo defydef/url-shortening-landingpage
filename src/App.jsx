@@ -5,6 +5,7 @@ import Hero from "./ui/Hero";
 import Header from "./ui/Header";
 import Form from "./ui/Form";
 import Stats from "./ui/Stats";
+import Banner from "./ui/Banner";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -18,6 +19,7 @@ function App() {
         <Form />
         <Stats />
       </div>
+      <Banner />
     </main>
   );
 }
