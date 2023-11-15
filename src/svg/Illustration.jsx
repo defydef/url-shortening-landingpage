@@ -3,9 +3,8 @@ function Illustration() {
     // <svg xmlns="http://www.w3.org/2000/svg" width="733" height="482">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="135%"
-      height="110%"
       viewBox="0 0 733 482"
+      className="w-[135%] h-[110%] sm:w-[120%]"
     >
       <defs>
         <linearGradient id="a" x1="0%" x2="100%" y1="50%" y2="50%">

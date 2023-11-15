@@ -5,7 +5,7 @@ function Button({
 }) {
   return (
     <button
-      className={`bg-[var(--accent)] ${additionalClass} p-4 ${round} text-white font-bold z-10`}
+      className={`bg-[var(--accent)] ${additionalClass} p-4 ${round} text-white font-bold z-10 hover:bg-[var(--disabled)]`}
     >
       {children}
     </button>
