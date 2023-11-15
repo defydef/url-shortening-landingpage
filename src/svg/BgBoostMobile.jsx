@@ -2,7 +2,7 @@ function BgBoostMobile() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="375"
+      width="100%"
       height="300"
       className="row-start-1 z-10 row-span-full col-start-1 col-span-full"
     >
