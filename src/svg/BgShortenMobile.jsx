@@ -4,7 +4,7 @@ function BgShortenMobile() {
       xmlns="http://www.w3.org/2000/svg"
       width="237"
       height="128"
-      className="z-0 row-start-1 -mt-6 ml-24 sm:hidden"
+      className="z-0 row-start-1 col-start-1 -mt-6 ml-24 sm:hidden"
     >
       <path
         fill="#4B3F6B"

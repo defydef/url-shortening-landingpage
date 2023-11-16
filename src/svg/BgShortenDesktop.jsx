@@ -1,6 +1,12 @@
 function BgShortenDesktop() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1110" height="168">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      //   width="1110"
+      width="100%"
+      height="168"
+      className="hidden sm:block row-start-1 col-start-1"
+    >
       <path
         fill="#4B3F6B"
         fillRule="evenodd"
