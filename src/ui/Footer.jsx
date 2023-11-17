@@ -7,12 +7,14 @@ function Footer() {
   const resourcesItems = ["Blog", "Developers", "Support"];
   const companyItems = ["About", "Our Team", "Careers", "Contact"];
   return (
-    <footer className="bg-[var(--dark)] w-screen flex flex-col justify-center items-center gap-14 p-16 text-white">
+    <footer className="bg-[var(--dark)] w-screen flex flex-col sm:flex-row justify-center sm:justify-around sm:items-start items-center gap-14 sm:gap-0 p-16 text-white">
       <Logo fill="white" />
-      <FooterContent title="Features" items={featureItems} />
-      <FooterContent title="Resources" items={resourcesItems} />
-      <FooterContent title="Company" items={companyItems} />
-      <SocialMediaIcons />
+      <div className="flex flex-col gap-12 sm:flex-row sm:gap-28 sm:justify-center sm:items-start">
+        <FooterContent title="Features" items={featureItems} />
+        <FooterContent title="Resources" items={resourcesItems} />
+        <FooterContent title="Company" items={companyItems} />
+        <SocialMediaIcons />
+      </div>
     </footer>
   );
 }
