@@ -12,11 +12,11 @@ import { shortenUrl } from "./services/apiCleanUrl";
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
 
-  const url1 = " https://github.com/";
-  const url2 = "https%3A%2F%2Fcleanuri.com%2F";
-
-  const data = { url: url1 };
-  shortenUrl();
+  async function testUrl() {
+    const x = await shortenUrl("https://dev.bitly.com");
+    console.log(x);
+  }
+  testUrl();
 
   return (
     <>
