@@ -13,7 +13,7 @@ function Form() {
             <input
               id="url"
               type="text"
-              className="p-4 placeholder:opacity-50 text-[var(--primary)] rounded-[0.3125rem] sm:w-[65vw]"
+              className="p-4 placeholder:opacity-50 text-[var(--primary)] rounded-[0.3125rem] sm:w-[65vw] focus:outline-[var(--accent)] focus:outline-offset-1"
               placeholder="Shorten a link here..."
             />
             <Button

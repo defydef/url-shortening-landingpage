@@ -7,10 +7,17 @@ import Form from "./ui/Form";
 import Stats from "./ui/Stats";
 import Banner from "./ui/Banner";
 import Footer from "./ui/Footer";
-import Illustration from "./svg/Illustration";
+import { shortenUrl } from "./services/apiCleanUrl";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
+
+  const url1 = " https://github.com/";
+  const url2 = "https%3A%2F%2Fcleanuri.com%2F";
+
+  const data = { url: url1 };
+  shortenUrl();
+
   return (
     <>
       <main>
