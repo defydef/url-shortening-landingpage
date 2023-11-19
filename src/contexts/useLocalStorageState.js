@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 
-export function useLocalStorageState(initialState, shortUrl) {
+export function useLocalStorageState(uniqueId) {
   const [storedUrl, setStoredUrl] = useState(function () {
-    const storedValue = localStorage.getItem(shortUrl);
-    return storedValue ? JSON.parse(storedValue) : initialState;
+    const storedValue = uniqueId && localStorage.getItem(uniqueId);
+    return storedValue ? JSON.parse(storedValue) : {};
     // initialize values in state using callback function that get values from local storage. this only executes on initial render
   });
   useEffect(
     function () {
-      localStorage.setItem(shortUrl, JSON.stringify(storedUrl));
+      storedUrl !== "" && storedUrl !== null
+        ? localStorage.setItem(uniqueId, JSON.stringify(storedUrl))
+        : null;
     },
-    [storedUrl, shortUrl]
+    [storedUrl, uniqueId]
   );
   return [storedUrl, setStoredUrl];
 }
