@@ -1,6 +1,6 @@
-function HorizontalLine() {
+function HorizontalLine({ width = "w-[17.4375rem]" }) {
   return (
-    <div className="w-[17.4375rem] h-[0.0625rem] bg-[var(--grey)] opacity-25"></div>
+    <div className={`${width} h-[0.0625rem] bg-[var(--grey)] opacity-25`}></div>
   );
 }
 

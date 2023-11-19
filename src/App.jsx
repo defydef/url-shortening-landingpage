@@ -8,6 +8,7 @@ import Stats from "./ui/Stats";
 import Banner from "./ui/Banner";
 import Footer from "./ui/Footer";
 import { LocalStorageProvider } from "./contexts/LocalStorageContext";
+import Transition from "./ui/Transition";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -21,13 +22,13 @@ function App() {
           <Hero />
           <Header />
         </div>
-        <div className="grid grid-rows-[1fr_1fr_minmax(1200px, _1fr)] grid-cols-1 pt-24">
-          <LocalStorageProvider>
+        <LocalStorageProvider>
+          <div className="grid grid-rows-[1fr_1fr_minmax(1200px, _1fr)] grid-cols-1 pt-24">
             <Form />
-            <Stats />
-          </LocalStorageProvider>
-        </div>
-
+            <Transition />
+          </div>
+          <Stats />
+        </LocalStorageProvider>
         <Banner />
       </main>
       <Footer />

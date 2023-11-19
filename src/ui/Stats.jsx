@@ -18,7 +18,7 @@ function Stats() {
   );
 
   return (
-    <section className="flex flex-col justify-center gap-5 items-center bg-[var(--light-grey)] z-0 row-start-2 row-span-2 col-start-1 px-10 sm:px-40 pt-28 pb-32">
+    <section className="flex flex-col justify-center gap-5 items-center bg-[var(--light-grey)] px-10 sm:px-40 pt-8 pb-32">
       {keys.map((key) => {
         const { shortUrl, longUrl } = JSON.parse(localStorage.getItem(key));
         return shortUrl ? (
