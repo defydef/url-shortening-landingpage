@@ -22,7 +22,7 @@ function Form() {
     const { link: shortUrl, long_url: longUrl } = await shortenUrl(url);
     shortUrl && setStoredUrl({ shortUrl, longUrl });
     setUrl("");
-    dispatch({ type: "submit" });
+    dispatch({ type: "submit", payload: url });
   }
 
   // const items = { ...localStorage };

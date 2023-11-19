@@ -4,7 +4,7 @@ import { createContext, useContext, useReducer } from "react";
 const LocalStorageContext = createContext();
 
 const initialState = {
-  isLocalStorageChange: false,
+  newUrlAdded: "",
 };
 
 function reducer(state, action) {
@@ -12,7 +12,7 @@ function reducer(state, action) {
     case "submit":
       return {
         ...state,
-        isLocalStorageChange: true,
+        newUrlAdded: action.payload,
       };
     default:
       throw new Error("Undefined action");
@@ -20,13 +20,10 @@ function reducer(state, action) {
 }
 
 function LocalStorageProvider({ children }) {
-  const [{ isLocalStorageChange }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [{ newUrlAdded }, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <LocalStorageContext.Provider value={{ isLocalStorageChange, dispatch }}>
+    <LocalStorageContext.Provider value={{ newUrlAdded, dispatch }}>
       {children}
     </LocalStorageContext.Provider>
   );

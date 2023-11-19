@@ -7,24 +7,25 @@ import { useLocalStorage } from "../contexts/LocalStorageContext";
 import { useEffect, useState } from "react";
 
 function Stats() {
-  const { isLocalStorageChange } = useLocalStorage();
+  const { newUrlAdded } = useLocalStorage();
   const [keys, setKeys] = useState(Object.keys(localStorage));
 
   useEffect(
     function () {
-      if (isLocalStorageChange) setKeys(Object.keys(localStorage));
+      if (newUrlAdded) setKeys(Object.keys(localStorage));
     },
-    [isLocalStorageChange]
+    [newUrlAdded]
   );
 
   return (
     <section className="flex flex-col justify-center gap-5 items-center bg-[var(--light-grey)] px-10 sm:px-40 pt-8 pb-32">
-      {keys.map((key) => {
-        const { shortUrl, longUrl } = JSON.parse(localStorage.getItem(key));
-        return shortUrl ? (
-          <UrlItem key={key} shortUrl={shortUrl} longUrl={longUrl} />
-        ) : null;
-      })}
+      {keys &&
+        keys.map((key) => {
+          const { shortUrl, longUrl } = JSON.parse(localStorage.getItem(key));
+          return shortUrl ? (
+            <UrlItem key={key} shortUrl={shortUrl} longUrl={longUrl} />
+          ) : null;
+        })}
       <h1 className="text-[1.75rem] text-[#34313D] font-bold leading-[3rem] text-center pt-20">
         Advanced Statistics
       </h1>
