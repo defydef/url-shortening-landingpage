@@ -2,11 +2,30 @@ import StatsItem from "./StatsItem";
 import IconBrandRecognition from "../svg/IconBrandRecognition";
 import IconDetailedRecords from "../svg/IconDetailedRecords";
 import IconFullyCustomizable from "../svg/IconFullyCustomizable";
+import UrlItem from "./UrlItem";
+import { useLocalStorage } from "../contexts/LocalStorageContext";
+import { useEffect, useState } from "react";
 
 function Stats() {
+  const { isLocalStorageChange } = useLocalStorage();
+  const [keys, setKeys] = useState(Object.keys(localStorage));
+
+  useEffect(
+    function () {
+      if (isLocalStorageChange) setKeys(Object.keys(localStorage));
+    },
+    [isLocalStorageChange]
+  );
+
   return (
-    <section className="flex flex-col justify-center gap-5 items-center bg-[var(--light-grey)] z-0 row-start-2 row-span-2 col-start-1 px-10 sm:px-40 pt-44 pb-32">
-      <h1 className="text-[1.75rem] text-[#34313D] font-bold leading-[3rem] text-center">
+    <section className="flex flex-col justify-center gap-5 items-center bg-[var(--light-grey)] z-0 row-start-2 row-span-2 col-start-1 px-10 sm:px-40 pt-28 pb-32">
+      {keys.map((key) => {
+        const { shortUrl, longUrl } = JSON.parse(localStorage.getItem(key));
+        return shortUrl ? (
+          <UrlItem key={key} shortUrl={shortUrl} longUrl={longUrl} />
+        ) : null;
+      })}
+      <h1 className="text-[1.75rem] text-[#34313D] font-bold leading-[3rem] text-center pt-20">
         Advanced Statistics
       </h1>
       <p className="leading-7 tracking-[0.00681rem] font-medium text-[var(--grey)] text-center text-base sm:w-[32vw]">
