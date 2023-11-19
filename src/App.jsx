@@ -7,16 +7,16 @@ import Form from "./ui/Form";
 import Stats from "./ui/Stats";
 import Banner from "./ui/Banner";
 import Footer from "./ui/Footer";
-import { shortenUrl } from "./services/apiCleanUrl";
+import { shortenUrl } from "./services/apiShortenUrl";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
 
   async function testUrl() {
-    const x = await shortenUrl("https://dev.bitly.com");
+    const x = await shortenUrl("https://scrimba.com/learn/learnreact");
     console.log(x);
   }
-  testUrl();
+  // testUrl();
 
   return (
     <>

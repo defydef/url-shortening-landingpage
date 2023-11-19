@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 import BgShortenDesktop from "../svg/BgShortenDesktop";
 import BgShortenMobile from "../svg/BgShortenMobile";
 import Button from "./Button";
+import { shortenUrl } from "../services/apiShortenUrl";
+import { useLocalStorageState } from "../contexts/useLocalStorageState";
 
 function Form() {
+  const [url, setUrl] = useState("");
+  const [storedUrl, setStoredUrl] = useLocalStorageState([], url || null);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const { link: shortUrl, long_url: longUrl } = url
+      ? await shortenUrl(url)
+      : {};
+    setStoredUrl({ shortUrl, longUrl }, 1);
+  }
   return (
     <section className="flex flex-col justify-start items-center row-start-1 row-span-2 col-start-1 z-10">
       <form className="py-6 sm:p-0 bg-[var(--secondary-1)] w-[327px] sm:w-[80vw] rounded-[0.625rem] overflow-hidden flex justify-center items-center">
@@ -15,10 +28,13 @@ function Form() {
               type="text"
               className="p-4 placeholder:opacity-50 text-[var(--primary)] rounded-[0.3125rem] sm:w-[65vw] focus:outline-[var(--accent)] focus:outline-offset-1"
               placeholder="Shorten a link here..."
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
             />
             <Button
               round="rounded-[0.3125rem]"
               additionalClass="sm:px-3 sm:w-[12vw]"
+              onClick={handleSubmit}
             >
               Shorten It!
             </Button>

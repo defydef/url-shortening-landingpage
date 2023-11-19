@@ -16,12 +16,11 @@ export async function shortenUrl(encodedUrl) {
       body: JSON.stringify({
         long_url: encodedUrl,
         domain: "bit.ly",
-        // group_guid: "Ba1bc23dE4F",
       }),
     });
     if (!res.ok) throw Error();
-    const { link } = await res.json();
-    return link;
+    const { link, long_url } = await res.json();
+    return { link, long_url };
   } catch {
     throw Error("Failed to shorten the url");
   }
