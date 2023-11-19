@@ -1,10 +1,11 @@
-import token from "../secret/tokens.json";
+// import token from "../secret/tokens.json";
 
 // const API_URL = "https://cleanuri.com/api/v1/shorten";
 const API_URL = "https://api-ssl.bitly.com/v4/shorten";
 export async function shortenUrl(encodedUrl) {
   try {
-    const accessToken = token.token;
+    // const accessToken = token.token;
+    const accessToken = "123"; // hardcoded token to deploy to Prod
     var headers = {
       Authorization: "Bearer " + accessToken,
       "Content-Type": "application/json",
