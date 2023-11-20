@@ -30,7 +30,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop view](./public/screenshot/desktop%20view.png)
-![Desktop view](./public/screenshot/desktop%20view%202.png)
+![Desktop view](./public/screenshot/desktop%20view%203.png)
 ![Form validation](./public/screenshot/form%20validation.png)
 ![Mobile view](./public/screenshot/mobile%20view.png)
 ![Mobile view](./public/screenshot/mobile%20view%202.png)
