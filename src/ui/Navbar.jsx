@@ -26,10 +26,10 @@ function Navbar({ setIsShowMobileMenu }) {
             <BurgerMenu />
           </button>
         </li>
-        <div className="hidden sm:flex justify-between items-center gap-8">
+        <li className="hidden sm:flex justify-between items-center gap-8">
           <p className={`text-[var(--grey)] font-bold ${hoverStyle}`}>Login</p>
           <Button additionalClass="px-8 w-max">Sign Up</Button>
-        </div>
+        </li>
       </ul>
     </nav>
   );
