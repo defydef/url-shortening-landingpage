@@ -4,7 +4,7 @@ import BgBoostDesktop from "../svg/BgBoostDesktop";
 
 function Banner() {
   return (
-    <div className="grid grid-rows-2 grid-cols-1">
+    <div className="grid grid-rows-2 grid-cols-1 w-screen">
       <BgBoostMobile />
       <BgBoostDesktop />
       <div className="w-screen bg-[var(--secondary-1)] z-0 row-start-1 row-span-full col-start-1 col-span-full"></div>

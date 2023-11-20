@@ -18,9 +18,9 @@ function UrlItem({ longUrl, shortUrl }) {
   }
 
   return (
-    <div className="w-[327px] sm:w-[80vw] rounded-[0.625rem] bg-white sm:px-6 py-3 px-4 flex sm:flex-row flex-col gap-3 sm:items-center justify-center sm:justify-between sm:text-[1.25rem]">
+    <div className="w-[327px] sm:w-[80vw] rounded-[0.625rem] bg-white sm:px-6 py-3 px-4 flex sm:flex-row flex-col gap-3 sm:items-center justify-center sm:justify-between sm:text-[1.25rem] overflow-hidden">
       <div className=" overflow-clip">{longUrl}</div>
-      <div className="-mx-4">
+      <div className="-mx-4 sm:m-0">
         <HorizontalLine width="w-full" />
       </div>
       <div className="flex sm:flex-row flex-col sm:items-center items-start gap-3 sm:gap-5 sm:py-2 cursor-pointer justify-between overflow-visible">

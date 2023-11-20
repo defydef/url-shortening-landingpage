@@ -9,6 +9,7 @@ import Banner from "./ui/Banner";
 import Footer from "./ui/Footer";
 import { LocalStorageProvider } from "./contexts/LocalStorageContext";
 import Transition from "./ui/Transition";
+import Attribution from "./ui/Attribution";
 
 function App() {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         <Banner />
       </main>
       <Footer />
+      <Attribution />
     </>
   );
 }
